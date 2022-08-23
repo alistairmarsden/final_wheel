@@ -25,6 +25,7 @@ def read_dictionary_file():
     d = open(r'data\dictionary.txt')
     dictionary = [x.strip() for x in d.readlines()]
     d.close()
+
 def read_wheel_txt_file():
     global wheel_list
     w = open(r'data\wheeldata.txt')
@@ -68,12 +69,6 @@ def word_guess():
         else:
             print('Guess another word: ')
     return word
-
-def letter_prompt(letter, count):
-    if count > 0:
-        print(f'There are {count} {letter}(s)')
-    else:
-        print(f'There were no {letter}s')
 
 def get_word():
     global dictionary
